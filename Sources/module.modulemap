@@ -1,5 +1,5 @@
 framework module Wormholy {
-    umbrella "."
+    umbrella header "Wormholy.h"
     
     export *
     module * { export * }

@@ -4,32 +4,25 @@ import PackageDescription
 
 let package = Package(
     name: "Wormholy",
-    platforms: [.iOS(.v16)],
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "Wormholy",
             targets: ["WormholySwift", "WormholyObjC"]),
     ],
-    dependencies: [
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "WormholySwift",
             dependencies: [],
             resources: [
-                .process("Resources/Assets.xcassets")
+                .process("SupportFiles/Assets.xcassets")
             ]
         ),
         .target(
             name: "WormholyObjC",
             dependencies: [
                 "WormholySwift"
-            ]),
-        .testTarget(
-            name: "WormholyTests",
-            dependencies: [
-                "WormholySwift",
-                "WormholyObjC"
             ]),
     ]
 )
