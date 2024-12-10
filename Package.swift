@@ -23,6 +23,8 @@ let package = Package(
             name: "WormholyObjC",
             dependencies: [
                 "WormholySwift"
-            ]),
+            ],
+            publicHeadersPath: "include"
+        ),
     ]
 )

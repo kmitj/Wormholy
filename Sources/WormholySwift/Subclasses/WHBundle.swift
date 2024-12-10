@@ -7,19 +7,3 @@
 //
 import UIKit
 
-class WHBundle: Bundle {
-    static func getBundle() -> Bundle{
-        #if SWIFT_PACKAGE
-        return Bundle.module
-        #else
-        let podBundle = Bundle(for: Wormholy.classForCoder())
-        if let bundleURL = podBundle.url(forResource: "WormholyResources", withExtension: "bundle"){
-            if let bundle = Bundle(url: bundleURL) {
-                return bundle
-            }
-        }
-        
-        return Bundle(for: Wormholy.classForCoder())
-        #endif
-    }
-}
