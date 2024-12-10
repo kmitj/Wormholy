@@ -47,4 +47,3 @@ __attribute__((constructor)) static void sessionConfigurationInjectEntry(void) {
                                                                                          [NSURLSessionConfiguration class],
                                                                                          YES);
 }
-
