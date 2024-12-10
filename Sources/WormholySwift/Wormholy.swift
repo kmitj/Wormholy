@@ -131,7 +131,7 @@ public class Wormholy: NSObject
 /// WormholyConstructor calls this to initialize library
 extension Wormholy {
     
-    @objc static func applicationDidFinishLaunching() {
+    @objc public static func applicationDidFinishLaunching() {
         initializeAction
     }
     
